@@ -1,0 +1,26 @@
+﻿@model WebApplication1.Models.Qualification_Type
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Qualification_Type</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Qualification_Types)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qualification_Types)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Qualification_Type_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

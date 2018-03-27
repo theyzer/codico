@@ -1,0 +1,64 @@
+﻿@model WebApplication1.Models.JobLocation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>JobLocation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.locationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationPostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationPostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationCity)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

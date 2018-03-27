@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication1.Models.Qualification_Type>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Qualification_Types)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qualification_Types)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Qualification_Type_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Qualification_Type_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Qualification_Type_ID })
+        </td>
+    </tr>
+}
+
+</table>

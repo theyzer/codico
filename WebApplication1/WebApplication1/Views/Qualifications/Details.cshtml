@@ -1,0 +1,42 @@
+﻿@model WebApplication1.Models.Qualification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Qualification</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Position_Qualifications.qID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position_Qualifications.qID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qualification_Type.Qualification_Types)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qualification_Type.Qualification_Types)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

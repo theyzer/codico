@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.JobLocation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JobLocation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.locationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationPostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationPostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationCity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

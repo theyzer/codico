@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication1.Models.Position_Qualifications>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Qualification.Desc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qualification.Desc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.qID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.qID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.qID })
+        </td>
+    </tr>
+}
+
+</table>

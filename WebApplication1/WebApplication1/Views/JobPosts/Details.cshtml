@@ -1,0 +1,171 @@
+﻿@model WebApplication1.Models.JobPost
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JobPost</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.jobCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobLocation.locationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobLocation.locationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobLocation.locationCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobLocation.locationCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobLocation.locationAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobLocation.locationAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobLocation.locationPostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobLocation.locationPostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobLocation.locationPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobLocation.locationPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Term.termDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Term.termDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postingStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postingStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postingStartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postingStartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postingEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postingEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postingEndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postingEndTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.successfulStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.successfulStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.successfulEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.successfulEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.successfulCandidate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.successfulCandidate)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.lastModify)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastModify)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modifyBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modifyBy)
+        </dd>*@
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

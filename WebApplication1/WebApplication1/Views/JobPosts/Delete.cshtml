@@ -1,0 +1,152 @@
+﻿@model WebApplication1.Models.JobPost
+
+@{
+    ViewBag.Title = "Archive";
+}
+
+<h2>Archive</h2>
+
+<h3>Are you sure you want to archive this?</h3>
+<div>
+    <h4>JobPost</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Term.termDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Term.termDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postingStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postingStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postingEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postingEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.successfulStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.successfulStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.successfulEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.successfulEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobLocationID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobLocationID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.skillsID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.skillsID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastModify)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastModify)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modifyBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modifyBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.successfulCandidate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.successfulCandidate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jobPositionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobPositionID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Archive" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

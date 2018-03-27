@@ -1,0 +1,104 @@
+﻿@model IEnumerable<WebApplication1.Models.JobPost>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm())
+{
+    @*<p>Search by Job Location: @Html.DropDownList("JobLocationID", null, "All Job Locations", htmlAttributes: new { @class = "form-control" })</p>*@
+    <p>Search by Job Code: @Html.TextBox("JobCode", null, "All Job Codes", new { @class = "form-control" })</p>
+    <p>Search by School Name: @Html.DropDownList("JobLocationID", null, "All School Names", htmlAttributes: new { @class = "form-control" })</p>
+    <p>Search by Job Name: @Html.TextBox("JobNameSearch", null, new { @class = "form-control" })</p>
+    <input type="submit" name="actionButton" value="Filter" class="btn btn-default" /> @Html.ActionLink("Clear", "Index");
+
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Job Code", "Index", new { sortOrder = ViewBag.JobCodeSort })
+        </th>
+        <th>
+            @Html.ActionLink("Position Name", "Index", new { sortOrder = ViewBag.JobNameSort })
+        </th>
+      
+        <th>
+
+            @Html.ActionLink("City", "Index", new { sortOrder = ViewBag.LocationSort })
+        </th>
+        
+        <th>
+            @Html.ActionLink("School", "Index", new { sortOrder = ViewBag.SchoolSort })
+        </th>
+
+        @*<th>
+            @Html.DisplayNameFor(model => model.jobDescription)
+        </th>*@
+
+        <th>
+            @Html.DisplayNameFor(model => model.Term.termDesc)
+        </th>
+
+        @*<th>
+            @Html.DisplayNameFor(model => model.JobLocation.locationAddress)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.JobLocation.locationPostalCode)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.JobLocation.locationPhoneNumber)
+        </th>*@
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.jobCode)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.jobName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobLocation.locationCity)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.JobLocation.locationName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.jobDescription)
+            </td>*@
+            <td>
+                @Html.DisplayFor(model => item.Term.termDesc)
+            </td>
+            @*<td>
+            @Html.DisplayFor(model => item.JobLocation.locationAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.JobLocation.locationPostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.JobLocation.locationPhoneNumber)
+        </td>*@
+            
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Archive", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+<input type="hidden" name="JobNameSort" value="@ViewBag.JobNameSort" />
+<input type="hidden" name="LocationSort" value="@ViewBag.LocationSort" />
+<input type="hidden" name="SchoolSort" value="@ViewBag.SchoolSort" />
+<input type="hidden" name="JobCodeSort" value="@ViewBag.JobCodeSort" />
